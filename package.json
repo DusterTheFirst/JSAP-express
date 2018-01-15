@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Parse JS Active Pages",
   "main": "index.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jsactivepages/jsap-parser.git"

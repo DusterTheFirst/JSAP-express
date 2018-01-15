@@ -8,7 +8,8 @@
         "watch": true,
         "noImplicitAny": true,
         "pretty": true,
-        "noImplicitReturns": true
+        "noImplicitReturns": true,
+        "declaration": true
     },
     "include": [
         "**/*"
