@@ -1,8 +1,8 @@
 {
   "name": "jsap-parser",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "Parse JS Active Pages",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "node ./test/test.js"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jsactivepages/jsap-parser/issues"
   },
-  "homepage": "https://github.com/jsactivepages/jsap-parser#readme"
+  "homepage": "https://github.com/jsactivepages/jsap-parser#readme",
+  "devDependencies": {
+    "@types/node": "^9.3.0"
+  }
 }

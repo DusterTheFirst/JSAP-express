@@ -5,8 +5,17 @@
 ```js
 <body>
 ${ 
-    Math.sqrt(3.14159265); 
-    return `sqrt of pi is ${}`;
+    let x = Math.sqrt(3.14159265); 
+    return `sqrt of pi is ${x}`;
+}
+</body>
+```
+## Expressions
+**Snippets that return themself**
+```js
+<body>
+={ 
+    `now is ${new Date()}`;
 }
 </body>
 ```
@@ -39,7 +48,8 @@ ${
 **Include other JSAP or html files**
 ```html
 <body>
-    @"headershiz.html"
+    +"headershiz.html" <-- Unparsed include --/>
+    +@"headershiz.html" <-- Parsed include --/>
 </body>
 ```
 

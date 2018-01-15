@@ -1,3 +1,5 @@
 *.js
 node_modules/
 .npmignore
+package-lock.json
+*.d.ts

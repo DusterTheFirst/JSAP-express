@@ -1,0 +1,30 @@
+%{
+    "isolate": true,
+    "error": "404.jsap",
+    "cool": "yes",
+    "more settings": 10000
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>={ new Date().toDateString() }</title>
+    </head>
+    <body>
+        --{
+            Unparsed page
+        }--
+        <p>
+            +"headershiz.html" <-- Unparsed include --/>
+        </p>
+        --{
+            Parsed page
+        }--
+        <p>
+            +@"headershiz.html" <-- Parsed include --/>
+        </p>
+        ${ 
+            let x = Math.sqrt(3.14159265); 
+            return `sqrt of pi is ${x}`;
+        }
+    </body>
+</html>
