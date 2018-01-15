@@ -22,6 +22,19 @@ ${
 }
 ```
 
+## .JSAPConfig
+**Configuration files for directories *(webserver only, not parser)***
+```json
+{
+    "hidden": true,
+    "permalink": "different/path",
+    "auth": {
+        "username": "beep beep",
+        "password": "lettuce"
+    }
+}
+```
+
 ## Includes
 **Include other JSAP or html files**
 ```html
