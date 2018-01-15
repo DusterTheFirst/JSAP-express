@@ -32,7 +32,7 @@ ${
 
 ## Comments
 **Gets removed by the parser, never makes it to the web**
-```json
+```
 --{
     This comment will never show up to the client
 }--
