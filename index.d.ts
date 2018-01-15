@@ -32,6 +32,7 @@ export declare class Snippet<T> {
 }
 export declare class FrontMatter {
     isolate: boolean;
+    error: string;
     unparsed: {
         [x: string]: string;
     };
