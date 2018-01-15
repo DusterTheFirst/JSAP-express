@@ -1,0 +1,16 @@
+{
+  "name": "jsap-parser",
+  "version": "1.0.0",
+  "description": "Parse JS Active Pages",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsactivepages/jsap-parser.git"
+  },
+  "author": "mcrocks999, DusterTheFirst",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jsactivepages/jsap-parser/issues"
+  },
+  "homepage": "https://github.com/jsactivepages/jsap-parser#readme"
+}
