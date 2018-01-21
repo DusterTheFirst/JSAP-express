@@ -1,4 +1,4 @@
-import { Snippet } from "../index";
+import { Snippet, PreparsedPage } from "../index";
 
 export class SnippetRuntimeError extends Error {
     /** Name of the error */
@@ -7,15 +7,19 @@ export class SnippetRuntimeError extends Error {
     message: string;
     /** Snippet that threw an error */
     snippet: Snippet<null>;
+    /** Preparsed page */
+    page: PreparsedPage;
     /** Error thrown */
     error: Error;
     /** Stacktrace */
     stack: string;
 
-    constructor(snippet: Snippet<any>, error: Error) {
-        super(`Error excecuting snippet at line ${snippet.row}:${snippet.column}: "${error.name}: ${error.message}"`);
+    constructor(page: PreparsedPage, snippet: Snippet<any>, error: Error) {
+        let pos = page.get2DPos(snippet.length);
+        super(`Error excecuting snippet at line ${pos.x}:${pos.y}: "${error.name}: ${error.message}"`);
         this.name = "SnippetRuntimeError";
         this.snippet = snippet;
         this.error = error;
+        this.page = page;
     }
 }

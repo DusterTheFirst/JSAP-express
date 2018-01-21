@@ -18,5 +18,8 @@
   "homepage": "https://github.com/jsactivepages/jsap-parser#readme",
   "devDependencies": {
     "@types/node": "^9.3.0"
+  },
+  "dependencies": {
+    "@types/express": "^4.11.0"
   }
 }

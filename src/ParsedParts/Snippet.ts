@@ -1,20 +1,21 @@
-export class Snippet<T> {
-    /** Row of the start of the snippet */
-    row: number;
-    /** Column of the start of the snippet */
-    column: number;
-    /** Length of the snippet */
-    length: number;
+import { Bracket } from "../index";
+
+export class Snippet<T> extends Bracket {
     /** Raw unparsed snippet */
     script: string;
-    /** Parsed snippet output */
-    output: T;
+    /** Output */
+    output: string;
 
-    constructor(row: number, column: number, length: number, script: string, output: T) {
-        this.row = row;
-        this.column = column;
-        this.length = length;
+    // Set defining types
+    prefix: "$";
+    suffix: "";
+
+    constructor(bracket: Bracket, script: string) {
+        super(bracket);
         this.script = script;
-        this.output = output;
+    }
+
+    evaluate(context: any) {
+        this.output = new Function("1+2")();
     }
 }

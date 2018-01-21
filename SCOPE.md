@@ -48,17 +48,16 @@ ${
 **Include other JSAP or html files**
 ```html
 <body>
-    +"headershiz.html" <-- Unparsed include --/>
-    +@"headershiz.html" <-- Parsed include --/>
+    +"headershiz.html" <!-- include headershiz.html to the file-->
 </body>
 ```
 
 ## Comments
 **Gets removed by the parser, never makes it to the web**
 ```
---{
+-{
     This comment will never show up to the client
-}--
+}-
 ```
 
 ## Callables

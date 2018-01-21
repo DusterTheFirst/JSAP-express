@@ -1,3 +1,2 @@
-# This is the public api for JSAP
-
-### WARNING: The node is not sandboxed
+# JSAP-express
+JSAP is an express middleware for parsing and displaying JavaScript Active Pages
