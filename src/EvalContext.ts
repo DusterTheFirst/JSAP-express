@@ -1,32 +1,23 @@
-import { FrontMatter } from "./index";
 import { Request, Response, Application } from "express";
+import { FrontMatter } from "./ParsedParts/FrontMatter";
 
 export class EvalContext {
     // Webserver interfacing
-    private _req: Request;
-    get req() {
-        if (this._req) return this._req;
-        else throw "Page parsed in non-webserver context. REQ, RES, and APP are unavaliable in this context";
-    }
-    private _res: Response;
-    get res() {
-        if (this._res) return this._res;
-        else throw "Page parsed in non-webserver context. REQ, RES, and APP are unavaliable in this context";
-    }
-    private _app: Application;
-    get app() {
-        if (this._app) return this._app;
-        else throw "Page parsed in non-webserver context. REQ, RES, and APP are unavaliable in this context";
-    }
+    public readonly app: Application;
+    public readonly req: Request;
 
     public readonly frontmatter: FrontMatter;
 
-    constructor(frontmatter: FrontMatter, express?: { app: Application, res: Response, req: Request }) {
+    constructor(frontmatter: FrontMatter, app: Application, req: Request, res: Response) {
         this.frontmatter = frontmatter;
-        if (express) {
-            this._app = express.app;
-            this._req = express.req;
-            this._res = express.res;
-        }
+        this.app = app;
+        this.req = req;
+        this.redirect = (a: string | number, b?: string | number) => res.redirect(a as any, b as any);
     }
+
+    // TODO: Make parser drop everything and switch pages when called
+    redirect(url: string): void;
+    redirect(status: number, url: string): void;
+    redirect(url: string, status: number): void;
+    redirect(a: string | number, b?: string | number) {}
 }

@@ -1,4 +1,4 @@
-import { IndexOutOfRangeError } from "./index";
+import { IndexOutOfRangeError } from "./Errors/IndexOutOfRangeError";
 
 export class PreparsedPage {
     /** Length of the file */

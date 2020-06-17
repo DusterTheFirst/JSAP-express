@@ -1,4 +1,4 @@
-import { Bracket } from "../index";
+import { Bracket } from "./Bracket";
 
 export class Comment extends Bracket {
     prefix: "-";

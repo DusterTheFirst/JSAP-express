@@ -1,5 +1,7 @@
-import { Snippet, PreparsedPage } from "../index";
+import { Snippet } from "../ParsedParts/Snippet";
+import { PreparsedPage } from "../PreparsedPage";
 
+// TODO: ExpressionRuntimeError
 export class SnippetRuntimeError extends Error {
     /** Name of the error */
     name: "SnippetRuntimeError";

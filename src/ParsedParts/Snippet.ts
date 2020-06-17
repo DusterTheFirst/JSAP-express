@@ -1,4 +1,4 @@
-import { Bracket } from "../index";
+import { Bracket } from "./Bracket";
 
 export class Snippet<T> extends Bracket {
     /** Raw unparsed snippet */

@@ -1,4 +1,5 @@
-import { Snippet, FrontMatter } from "./index";
+import { Snippet } from "./ParsedParts/Snippet";
+import { FrontMatter } from "./ParsedParts/FrontMatter";
 
 export class ParsedPage {
     /** Parsed HTML */

@@ -1,5 +1,5 @@
-import { Bracket } from "../index";
 import { EvalContext } from "../EvalContext";
+import { Bracket } from "./Bracket";
 
 export class Expression<T> extends Bracket {
     /** Raw unparsed snippet */
